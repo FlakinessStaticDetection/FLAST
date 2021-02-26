@@ -14,10 +14,10 @@ In order to replicate the experiment follow these steps:
 1. Clone the repository:
    - `git clone https://github.com/FlakyFAST/FLAST`
  
-2. If you do not have *python3* installed you can get the appropriate version for your OS [here](https://www.python.org/downloads/).
+2. This project requires *python3.8+*. If you do not have it installed you can get the appropriate version for your OS [here](https://www.python.org/downloads/).
 
 3. Install the additional python packages required:
-   - `python -m pip install -r requirements.txt`
+   - `python3 -m pip install -r requirements.txt`
 
 ### Dataset creation
 Decompress the dataset:
@@ -27,18 +27,18 @@ Decompress the dataset:
 Execute the research questions scripts.
 
 ##### RQ1:
-   - `python params-k.py` (varying k)
-   - `python params-dist.py` (varying distance)
-   - `python params-eps.py` (varying epsilon)
-   - `python params-sigma.py` (varying sigma)
+   - `python3 params-k.py` (varying k)
+   - `python3 params-dist.py` (varying distance)
+   - `python3 params-eps.py` (varying epsilon)
+   - `python3 params-sigma.py` (varying sigma)
 
 ##### RQ2:
-   - `python training-size.py`
+   - `python3 training-size.py`
 
 ##### RQ3 & RQ4:
-   - `python single-projects.py` (RQ3 & RQ4, effectiveness and running time)
-   - `python storage.py` (RQ4, storage overhead)
-   - `python random-classifier.py` (comparison with random classifier)
+   - `python3 single-projects.py` (RQ3 & RQ4, effectiveness and running time)
+   - `python3 storage.py` (RQ4, storage overhead)
+   - `python3 random-classifier.py` (comparison with random classifier)
 
 
 
