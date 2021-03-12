@@ -12,9 +12,9 @@ In order to replicate the experiment follow these steps:
 ### Getting started
 
 1. Clone the repository:
-   - `git clone https://github.com/FlakyFAST/FLAST`
+   - `git clone https://github.com/FlakinessStaticDetection/FLAST`
  
-2. This project requires *python3.8+*. If you do not have it installed you can get the appropriate version for your OS [here](https://www.python.org/downloads/).
+2. If you do not have *python3* installed you can get the appropriate version for your OS [here](https://www.python.org/downloads/).
 
 3. Install the additional python packages required:
    - `python3 -m pip install -r requirements.txt`
@@ -27,19 +27,10 @@ Decompress the dataset:
 Execute the research questions scripts.
 
 ##### RQ1:
-   - `python3 params-k.py` (varying k)
-   - `python3 params-dist.py` (varying distance)
-   - `python3 params-eps.py` (varying epsilon)
-   - `python3 params-sigma.py` (varying sigma)
+   - `python3 py/eff-eff.py`
 
 ##### RQ2:
-   - `python3 training-size.py`
-
-##### RQ3 & RQ4:
-   - `python3 single-projects.py` (RQ3 & RQ4, effectiveness and running time)
-   - `python3 storage.py` (RQ4, storage overhead)
-   - `python3 random-classifier.py` (comparison with random classifier)
-
+   - `python3 py/compare-pinto.py`
 
 
 Pseudocode
