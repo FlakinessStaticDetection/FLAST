@@ -14,7 +14,7 @@ In order to replicate the experiment follow these steps:
 1. Clone the repository:
    - `git clone https://github.com/FlakinessStaticDetection/FLAST`
  
-2. If you do not have *python3* installed you can get the appropriate version for your OS [here](https://www.python.org/downloads/).
+2. The experiments have been run using *python3.9.2*. You can get the appropriate version for your OS [here](https://www.python.org/downloads/).
 
 3. Install the additional python packages required:
    - `python3 -m pip install -r requirements.txt`
@@ -43,10 +43,14 @@ Directory Structure
 This is the root directory of the repository. The directory is structured as follows:
 
     FLAST
-     .                        Scripts with FLAST implementation and scripts to run experiments.
      |
      |--- dataset/            Dataset folder, automatically generated after the decompression of `dataset.tgz`.
      |
-     |--- manual-inspection/  Tests considered in the manual inspection
+     |--- manual-inspection/  Tests considered in the manual inspection.
      |
      |--- pseudocode/         The pseudocode of FLAST.
+     |
+     |--- py/                 Scripts with FLAST implementation and scripts to run experiments.
+     |
+     |--- results/            Folder with the results of the experiments.
+     
