@@ -110,7 +110,7 @@ if __name__ == "__main__":
     # FLAST
     dim = 0  # number of dimensions (0: JL with error eps)
     eps = 0.3  # JL eps
-    params = { "algorithm": "brute", "metric": "cosine", "weights": "uniform" }
+    params = { "algorithm": "brute", "metric": "cosine", "weights": "distance" }
     for k in [3, 7]:
         for sigma in [0.5, 0.95]:
             for projectName in projectList:
