@@ -4,6 +4,8 @@ This repository is a companion page for the submission "Know Your Neighbor: Fast
 
 It contains all the material required for replicating the experiments, including: the algorithm implementation, the datasets and their ground truth, and the scripts for the experiments replication.
 
+It also contains additional material used to investigate the effect of FLAST's parameter on its effectiveness and efficiency.
+
 
 Experiment Replication
 ---------------
@@ -26,10 +28,10 @@ Decompress the dataset:
 ### Answering the Research Questions
 Execute the research questions scripts.
 
-##### RQ1:
+##### RQ1 and RQ2:
    - `python3 py/eff-eff.py`
 
-##### RQ2:
+##### RQ3:
    - `python3 py/compare-pinto.py`
 
 
@@ -47,6 +49,8 @@ This is the root directory of the repository. The directory is structured as fol
      |--- dataset/            Dataset folder, automatically generated after the decompression of `dataset.tgz`.
      |
      |--- manual-inspection/  Tests considered in the manual inspection.
+     |
+     |--- parameters/         The investigation on the effect of FLAST's parameters.
      |
      |--- pseudocode/         The pseudocode of FLAST.
      |
