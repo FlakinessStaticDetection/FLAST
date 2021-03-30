@@ -161,3 +161,22 @@ if __name__ == "__main__":
         (flakyTrain, nonFlakyTrain, flakyTest, nonFlakyTest, avgP, avgR, storage, avgTPrep, avgTPred) = flastKNN(outDir, projectBasePath, projectName, kf, dim, eps, k, sigma, params)
         with open(os.path.join(outDir, outFile), "a") as fo:
             fo.write("{},{},{},{},{},{},{},{},{}\n".format(params["metric"], k, sigma, eps, avgP, avgR, storage, avgTPrep, avgTPred))
+
+    # TRAINING
+    outFile = "params-training.csv"
+    with open(os.path.join(outDir, outFile), "w") as fo:
+        fo.write("trainingSetSize,k,sigma,eps,precision,recall,storage,preparationTime,predictionTime\n")
+
+    k = 7
+    dim = 0  # number of dimensions (0: JL with error eps)
+    eps = 0.3  # JL eps
+    params = { "algorithm": "brute", "metric": "cosine", "weights": "uniform" }
+    numSplit = 30
+    for testSetSize in [0.9, 0.8, 0.7, 0.6, 0.5, 0.4, 0.3, 0.2, 0.1]:
+        trainingSetSize = 1 - testSetSize
+        for sigma in [0.5, 0.95]:
+            kf = StratifiedShuffleSplit(n_splits=numSplit, test_size=testSetSize)
+            print(f"{k=}, {sigma=}, {testSetSize=}")
+            (flakyTrain, nonFlakyTrain, flakyTest, nonFlakyTest, avgP, avgR, storage, avgTPrep, avgTPred) = flastKNN(outDir, projectBasePath, projectName, kf, dim, eps, k, sigma, params)
+            with open(os.path.join(outDir, outFile), "a") as fo:
+                fo.write("{},{},{},{},{},{},{},{},{}\n".format(trainingSetSize, k, sigma, eps, avgP, avgR, storage, avgTPrep, avgTPred))
