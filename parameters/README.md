@@ -1,5 +1,9 @@
 # FLAST parameters tuning
 
+## Varying training set size
+<img src="training.png" width="50%">
+
+Other parameters: $\varepsilon=0.3$; $k=7$.
 
 ## Varying distance
 <img src="dist.png" width="50%">
